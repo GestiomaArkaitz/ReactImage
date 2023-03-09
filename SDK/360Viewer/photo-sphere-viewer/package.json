@@ -1,0 +1,129 @@
+{
+  "_from": "photo-sphere-viewer",
+  "_id": "photo-sphere-viewer@4.6.2",
+  "_inBundle": false,
+  "_integrity": "sha512-YY+MoE0bChV3q/yBIq9sGQyLkUpBnHK7Rx0wG1dya83R2njVQSn5ha+6yq2idlJ7IdDrA7zKMdfJFG5yVt+ylA==",
+  "_location": "/photo-sphere-viewer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "photo-sphere-viewer",
+    "name": "photo-sphere-viewer",
+    "escapedName": "photo-sphere-viewer",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/photo-sphere-viewer/-/photo-sphere-viewer-4.6.2.tgz",
+  "_shasum": "2417d1f65b507f75ae5dbc66a4ecb9ce53a41257",
+  "_spec": "photo-sphere-viewer",
+  "_where": "C:\\xampp\\htdocs\\visor_xeokit\\visorv1\\360\\Prueba360",
+  "authors": [
+    {
+      "name": "Jérémy Heleine",
+      "email": "jeremy.heleine@gmail.com",
+      "homepage": "http://jeremyheleine.me"
+    },
+    {
+      "name": "Damien \"Mistic\" Sorel",
+      "email": "contact@git.strangeplanet.fr",
+      "homepage": "https://www.strangeplanet.fr"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/mistic100/Photo-Sphere-Viewer/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "three": "^0.140.0",
+    "uevent": "^2.1.1"
+  },
+  "deprecated": false,
+  "description": "A JavaScript library to display Photo Sphere panoramas",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.14.5",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/register": "^7.15.3",
+    "@compodoc/live-server": "^1.2.3",
+    "@pixi/jsdoc-template": "^2.5.1",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@vuepress/plugin-active-header-links": "^1.8.2",
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-google-analytics": "^1.8.2",
+    "autoprefixer": "^10.3.3",
+    "axios": "^0.27.0",
+    "cpx2": "^4.1.2",
+    "date-fns": "^2.23.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "jsdoc": "^3.6.7",
+    "marked": "^4.0.0",
+    "mocha": "^10.0.0",
+    "nosleep.js": "^0.12.0",
+    "npm-run-all": "^4.1.3",
+    "postcss": "^8.3.6",
+    "postcss-banner": "^4.0.1",
+    "raw-loader": "^4.0.2",
+    "rollup": "^2.56.0",
+    "rollup-plugin-dts": "^4.0.0",
+    "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-string": "^3.0.0",
+    "sass": "^1.43.4",
+    "stylelint": "^14.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "typescript": "^4.4.2",
+    "vue-material": "^1.0.0-beta-15",
+    "vue-slider-component": "^3.2.14",
+    "vue-swatches": "^2.1.1",
+    "vuepress": "^1.8.2"
+  },
+  "files": [
+    "src/",
+    "dist/",
+    "types/"
+  ],
+  "homepage": "https://photo-sphere-viewer.js.org",
+  "keywords": [
+    "photosphere",
+    "panorama",
+    "threejs"
+  ],
+  "license": "MIT",
+  "main": "dist/photo-sphere-viewer.js",
+  "name": "photo-sphere-viewer",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mistic100/Photo-Sphere-Viewer.git"
+  },
+  "scripts": {
+    "compile": "rollup --config rollup.config.js",
+    "dev:serve": "node -e \"setTimeout(() => process.exit(0), 10000)\" && live-server --watch=dist,example --open=example",
+    "dev:watch": "npm run compile -- --watch",
+    "doc": "npm-run-all doc:*",
+    "doc:assets": "cpx \"example/assets/*\" public/assets",
+    "doc:clean": "rm -rf public/*",
+    "doc:jsdoc": "jsdoc --configure .jsdoc.json --destination public/api src",
+    "doc:vuepress": "vuepress build docs",
+    "start": "npm-run-all --parallel dev:**",
+    "start:doc": "vuepress dev docs",
+    "test": "npm-run-all --parallel test:*",
+    "test:eslint": "eslint src --ignore-path .gitignore",
+    "test:mocha": "mocha --require @babel/register --recursive \"src/**/*.spec.js\"",
+    "test:sasslint": "stylelint \"src/**/*.scss\"",
+    "test:types": "cd tests && npm run test"
+  },
+  "types": "dist/photo-sphere-viewer.d.ts",
+  "version": "4.6.2"
+}
